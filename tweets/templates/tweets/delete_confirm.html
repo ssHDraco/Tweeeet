@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <form action="" method="post">{% csrf_token %}
+    <div class="text-center">
+      <span style="font-size:20px; color:red">Are you sure you want to delete the tweet "{{ object }}"?</span><br/>
+      {% include "tweets/form.html" with form=form btn_title='Confirm' %}
+      <!-- <input type="submit" value="Confirm" /> -->
+    </div>
+  </form>
+{% endblock content %}
